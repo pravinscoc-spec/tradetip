@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/auto_smc_bot.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "api/auto_smc_bot.py"
+    }
+  ],
+  "env": {
+    "TELEGRAM_TOKEN": "@TELEGRAM_TOKEN",
+    "CHAT_ID": "@CHAT_ID",
+    "ANGEL_USER": "@ANGEL_USER",
+    "ANGEL_PASSWORD": "@ANGEL_PASSWORD"
+  }
+}
